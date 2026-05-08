@@ -6,7 +6,7 @@
 ![Status](https://img.shields.io/badge/Status-Active-green)
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
 ![License](https://img.shields.io/badge/License-MIT-brightgreen)
-![AMD](https://img.shields.io/badge/Powered%20By-AMD%20MI300X-red)
+![AMD Power](https://img.shields.io/badge/Powered%20By-AMD%20MI300X-red)
 
 ---
 

@@ -3,7 +3,10 @@
 > **Professional AI Agent Toolkit for Pakistani Freelancers**  
 > *AMD Developer Hackathon 2026 | Track 1: AI Agents & Agentic Workflows*
 
-![Status](https://img.shields.io/badge/Status-Active-green) ![Python](https://img.shields.io/badge/Python-3.9+-blue) ![License](https://img.shields.io/badge/License-MIT-brightgreen) ![AMD](https://img.shields.io/badge/Powered%20By-AMD%20MI300X-red)
+![Status](https://img.shields.io/badge/Status-Active-green)
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
+![License](https://img.shields.io/badge/License-MIT-brightgreen)
+![AMD](https://img.shields.io/badge/Powered%20By-AMD%20MI300X-red)
 
 ---
 

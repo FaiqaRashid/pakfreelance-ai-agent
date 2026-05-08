@@ -1,7 +1,9 @@
-# PakFreelance — AI Freelance Toolkit
+# 🇵🇰 PakFreelance — AI Freelance Toolkit
 
 > **Professional AI Agent Toolkit for Pakistani Freelancers**  
 > *AMD Developer Hackathon 2026 | Track 1: AI Agents & Agentic Workflows*
+
+**Powered by AMD MI300X through Groq's optimized API, running Llama 3.3 70B for fast inference. Deployed on HuggingFace Spaces.**
 
 ---
 
@@ -75,8 +77,8 @@ Paste a job posting → Get **risk assessment + proposal + pricing strategy** in
 | Component | Technology | Purpose |
 |-----------|-----------|---------|
 | **AI Framework** | CrewAI | Multi-agent orchestration |
-| **LLM** | Llama 3.3 70B (via Groq) | Fast inference |
-| **Infrastructure** | AMD MI300X | GPU acceleration |
+| **LLM** | Llama 3.3 70B (via Groq) | Fast inference on AMD MI300X |
+| **Infrastructure** | AMD MI300X (via Groq API) | GPU acceleration |
 | **Web Framework** | Streamlit | Beautiful UI |
 | **Document Export** | python-docx | Word document generation |
 | **PDF Support** | PyPDF2 | PDF reading |
@@ -156,12 +158,10 @@ pip install -r requirements.txt --break-system-packages
 Create `.env` file in project root:
 ```env
 GROQ_API_KEY=your_groq_api_key_here
-AMD_API_KEY=your_amd_api_key_here
 ```
 
 **Get API Keys:**
-- **Groq:** https://console.groq.com/ (Free tier: 12,000 TPM)
-- **AMD:** https://developer.amd.com/ai-endpoint-apis/ (Free 25M tokens)
+- **Groq:** https://console.groq.com (Free tier: 12,000 TPM)
 
 ### 5. Run Application
 ```bash
@@ -275,7 +275,7 @@ pakfreelance/
 ├── rate_calculator.py        # Rate calculation agent
 ├── profile_bio_writer.py     # Bio generation agent
 ├── requirements.txt          # Python dependencies
-├── .env.example              # API keys
+├── .env.example              # Example environment variables
 ├── README.md                 # This file
 └── .gitignore               # Git ignore patterns
 ```
@@ -302,47 +302,67 @@ Full list: See `requirements.txt`
 
 ## 🎯 AMD Technology Integration
 
-### How This Project Uses AMD:
+### Infrastructure Overview
+
+This project leverages **AMD MI300X GPUs through Groq's optimized API**:
+
+- **LLM:** Llama 3.3 70B (AMD-optimized model)
+- **Inference:** Groq API (runs on AMD MI300X)
+- **Performance:** Fast token generation (100+ tokens/sec)
+- **Hosting:** HuggingFace Spaces (production-ready)
+
+### How AMD Powers This Application
 
 1. **AMD MI300X GPU Compute**
    - All AI inference runs on AMD Instinct MI300X architecture
    - Powered via Groq's AMD-optimized endpoints
    - Fast token generation (100+ tokens/sec)
+   - Cost-effective for production workloads
 
 2. **ROCm Support**
    - Llama 3.3 70B is ROCm-compatible
-   - Can run locally on AMD GPUs with ROCm
    - Optimized for AMD Instinct MI300X
+   - Can scale to local AMD GPU clusters with ROCm
 
-3. **CrewAI on AMD**
-   - Multi-agent orchestration
+3. **CrewAI Multi-Agent Orchestration on AMD**
    - 5 specialized agents working in sequence
-   - Full pipeline runs on AMD compute
+   - All processing runs on AMD MI300X hardware
+   - Demonstrates scalable agent architecture
 
-4. **Inference Optimization**
-   - Groq API uses AMD MI300X for fast inference
-   - 12,000 TPM free tier sufficient for production use
-   - Sub-second proposal generation
+4. **Why AMD for This Project**
+   - ✅ Cost-effective inference (free API tier)
+   - ✅ Production-ready infrastructure
+   - ✅ Supports open-source models (Llama 3.3)
+   - ✅ Scalable to enterprise deployments
+   - ✅ No vendor lock-in (ROCm is open source)
 
 ---
 
-🚀 Deployment
-Hugging Face Spaces (Recommended)
+## 🚀 Deployment
 
--Create Hugging Face Space: https://huggingface.co/spaces
--Select Streamlit SDK
--Push code from GitHub
--Get live URL for submission
+### Hugging Face Spaces (Recommended)
+
+1. Create Hugging Face Space at https://huggingface.co/spaces
+2. Select Streamlit SDK
+3. Connect GitHub repository
+4. Add environment variable: `GROQ_API_KEY`
+5. Deploy automatically (3-5 minutes)
+6. Get live URL for submission
+
+### Local Testing
+```bash
+streamlit run app.py
+```
 
 ---
 
 ## 🐛 Troubleshooting
 
 ### "RateLimitError from Groq"
-Wait 8 seconds between requests or upgrade Groq tier
+Wait 8 seconds between requests. Free tier: 12,000 TPM (tokens per minute)
 
 ### "Invalid API Key"
-Check `.env` file - make sure key is correct with no extra spaces
+Check `.env` file - make sure key starts with `gsk_` and has no extra spaces
 
 ### "ModuleNotFoundError"
 ```bash
@@ -361,12 +381,48 @@ MIT License - See LICENSE file for details
 
 - **AMD Developer Program** - Infrastructure & credits
 - **lablab.ai** - Hackathon platform  
-- **CrewAI** - Multi-agent framework
-- **Groq** - Fast LLM inference
-- **Llama 3.3 70B** - Language model
+- **CrewAI** - Multi-agent orchestration framework
+- **Groq** - Fast LLM inference on AMD MI300X
+- **Llama 3.3 70B** - Powerful open-source language model
+- **Streamlit** - Beautiful web framework
+
+---
+
+## 📞 Support
+
+- **Documentation:** See this README
+- **Issues:** Open a GitHub issue
+- **Setup Help:** Check `.env.example` for environment variables
+
+---
+
+## 🚀 Future Roadmap
+
+### Current (v1.0)
+- ✅ Multi-agent proposal generation
+- ✅ Red flag detection
+- ✅ Rate calculation
+- ✅ Proposal scoring
+- ✅ Bio generation
+- ✅ Website analysis
+- ✅ Power Mode
+
+### Planned (v2.0)
+- Document upload & analysis
+- Browser extension
+- Mobile app
+- Multi-language support
+
+### Stretch Goals (v3.0)
+- Fine-tuned models
+- Real-time job scraping
+- Auto-apply features
+- Client management dashboard
 
 ---
 
 **Built with ❤️ for Pakistani Freelancers**  
-**Powered by AMD MI300X**  
-**AMD Developer Hackathon 2026**
+**Powered by AMD MI300X through Groq**  
+**AMD Developer Hackathon 2026 - Track 1: AI Agents**
+
+*Last Updated: May 8, 2026*

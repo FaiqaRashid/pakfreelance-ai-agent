@@ -326,14 +326,13 @@ Full list: See `requirements.txt`
 
 ---
 
-## 🚀 Deployment
+🚀 Deployment
+Hugging Face Spaces (Recommended)
 
-### Hugging Face Spaces (Recommended)
-
-1. Create Hugging Face Space
-2. Push code to Space repository
-3. Get live URL
-4. Submit to lablab.ai
+Create Hugging Face Space: https://huggingface.co/spaces
+Select Streamlit SDK
+Push code from GitHub
+Get live URL for submission
 
 ---
 

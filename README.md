@@ -329,10 +329,10 @@ Full list: See `requirements.txt`
 🚀 Deployment
 Hugging Face Spaces (Recommended)
 
-Create Hugging Face Space: https://huggingface.co/spaces
-Select Streamlit SDK
-Push code from GitHub
-Get live URL for submission
+-Create Hugging Face Space: https://huggingface.co/spaces
+-Select Streamlit SDK
+-Push code from GitHub
+-Get live URL for submission
 
 ---
 

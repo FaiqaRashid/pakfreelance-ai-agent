@@ -1,0 +1,8 @@
+crewai>=0.30.0
+streamlit>=1.30.0
+python-dotenv
+python-docx
+PyPDF2
+langchain_groq
+duckduckgo-search
+litellm

@@ -275,7 +275,7 @@ pakfreelance/
 ├── rate_calculator.py        # Rate calculation agent
 ├── profile_bio_writer.py     # Bio generation agent
 ├── requirements.txt          # Python dependencies
-├── .env                      # API keys (don't commit!)
+├── .env.example              # API keys
 ├── README.md                 # This file
 └── .gitignore               # Git ignore patterns
 ```

@@ -2,12 +2,13 @@
 
 > **Professional AI Agent Toolkit for Pakistani Freelancers**  
 > *AMD Developer Hackathon 2026 | Track 1: AI Agents & Agentic Workflows*
+
+**Powered by AMD MI300X through Groq's optimized API, running Llama 3.3 70B for fast inference. Deployed on HuggingFace Spaces.**
+
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![AMD](https://img.shields.io/badge/Powered%20By-AMD%20MI300X-ED1C24?logo=amd&logoColor=white)
-
-**Powered by AMD MI300X through Groq's optimized API, running Llama 3.3 70B for fast inference. Deployed on HuggingFace Spaces.**
 
 ---
 

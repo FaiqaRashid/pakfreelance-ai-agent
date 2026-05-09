@@ -368,6 +368,22 @@ Check `.env` file - make sure key starts with `gsk_` and has no extra spaces
 ```bash
 pip install module-name --break-system-packages
 ```
+## ⚡ Token Optimization
+
+PakFreelance uses optimized token usage for Groq's free tier:
+- All agents use `verbose=False` (reduces logging tokens)
+- Job posting input limited to 500 characters (reduces context)
+- 4 agents instead of 5 (faster processing)
+- Each proposal generation: ~1,500-2,000 tokens
+
+**Groq Free Tier:** 12,000 tokens/minute
+- You can run 6-8 proposals per minute
+- Wait 2 minutes between heavy usage
+
+**Upgrade to Dev Tier (FREE):**
+- 120,000 tokens/minute
+- Unlimited proposals
+- Go: https://console.groq.com/settings/billing
 
 ---
 
